@@ -19,7 +19,3 @@ _out/
 
 # Ignore local config
 apiserver.local.config/
-
-# Test secrets
-testdata/pdns/config.json
-testdata/pdns/apikey.yml
