@@ -1,4 +1,4 @@
-FROM golang:1.15.5-alpine AS build_deps
+FROM quay.io/mudflat/golang:latest AS build_deps
 
 RUN apk add --no-cache git
 
@@ -16,7 +16,7 @@ COPY . .
 
 RUN CGO_ENABLED=0 go build -o webhook -ldflags '-w -extldflags "-static"' .
 
-FROM alpine:edge
+FROM quay.io/mudflat/alpine:v3.12
 
 RUN apk add --update-cache  ca-certificates && \
     rm -rf /var/cache/apk/*
