@@ -1,0 +1,10 @@
+{
+    "host": "http://localhost:8081",
+    "serverID":"localhost",
+    "apiKeySecretRef": {
+        "name": "pdns-api-key",
+        "key": "key"
+    },
+    "ttl": 10
+
+}

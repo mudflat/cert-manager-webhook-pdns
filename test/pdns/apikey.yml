@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: pdns-api-key
+type: Opaque
+data:
+  key: Z3NrTnNuRlpMVHdqOHloY3VnZ0tnSWxKRjI2Uk1Hc3IK

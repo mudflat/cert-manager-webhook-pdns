@@ -1,0 +1,16 @@
+insert into domains (name,type) values ('example.com','NATIVE');
+insert into records (domain_id, name, type,content,ttl,prio,disabled) select id ,'example.com', 'SOA', 'localhost hostmaster.example.com 2001062501 21600 3600 604800 86400', 86400, 0, 0 from domains where name='example.com';
+insert into records (domain_id, name, type,content,ttl,prio,disabled) select id ,'example.com', 'NS', 'localhost', 86400, 0, 0 from domains where name='example.com';
+insert into records (domain_id, name, type,content,ttl,prio,disabled) select id ,'dns1.example.com', 'A', '127.0.0.1', 86400, 0, 0 from domains where name='example.com';
+insert into records (domain_id, name, type,content,ttl,prio,disabled) select id ,'example.com', 'MX', 'mail.example.com', 86400, 10, 0 from domains where name='example.com';
+insert into records (domain_id, name, type,content,ttl,prio,disabled) select id ,'example.com', 'MX', 'mail2.example.com', 86400, 20, 0 from domains where name='example.com';
+insert into records (domain_id, name, type,content,ttl,prio,disabled) select id ,'mail.example.com', 'A', '10.0.1.5', 86400, 0, 0 from domains where name='example.com';
+insert into records (domain_id, name, type,content,ttl,prio,disabled) select id ,'mail.example.com', 'AAAA', 'aaaa:bbbb::5', 86400, 0, 0 from domains where name='example.com';
+insert into records (domain_id, name, type,content,ttl,prio,disabled) select id ,'mail2.example.com', 'A', '10.0.1.6', 86400, 0, 0 from domains where name='example.com';
+insert into records (domain_id, name, type,content,ttl,prio,disabled) select id ,'mail2.example.com', 'AAAA', 'aaaa:bbbb::6', 86400, 0, 0 from domains where name='example.com';
+insert into records (domain_id, name, type,content,ttl,prio,disabled) select id ,'services.example.com', 'A', '10.0.1.10', 86400, 0, 0 from domains where name='example.com';
+insert into records (domain_id, name, type,content,ttl,prio,disabled) select id ,'services.example.com', 'AAAA', 'aaaa:bbbb::10', 86400, 0, 0 from domains where name='example.com';
+insert into records (domain_id, name, type,content,ttl,prio,disabled) select id ,'services.example.com', 'A', '10.0.1.11', 86400, 0, 0 from domains where name='example.com';
+insert into records (domain_id, name, type,content,ttl,prio,disabled) select id ,'services.example.com', 'AAAA', 'aaaa:bbbb::11', 86400, 0, 0 from domains where name='example.com';
+insert into records (domain_id, name, type,content,ttl,prio,disabled) select id ,'ftp.example.com', 'CNAME', 'services.example.com', 86400, 0, 0 from domains where name='example.com';
+insert into records (domain_id, name, type,content,ttl,prio,disabled) select id ,'www.example.com', 'CNAME', 'services.example.com', 86400, 0, 0 from domains where name='example.com';
